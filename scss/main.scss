@@ -1,5 +1,117 @@
 @import "./resets", "./variables", "./mixins";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $primary-color;
+  color: $text-color;
+  font-family: $font-style, sans-serif;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  // height: 9vh;
+  z-index: 100;
+  padding: 1rem;
+  background-color: red;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 90;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  // background-color: blue;
+  @include transition-ease-in-out;
+
+  &__burger {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 28px;
+    height: 3px;
+    background-color: $text-color;
+    @include transition-ease-in-out;
+    border-radius: 8px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 16px;
+      height: 3px;
+      background-color: $text-color;
+      @include transition-ease-in-out;
+      border-radius: 8px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      width: 22px;
+      height: 3px;
+      background-color: $text-color;
+      @include transition-ease-in-out;
+      border-radius: 8px;
+    }
+
+    &.open {
+      transform: rotate(720deg);
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+        width: 28px;
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(3px, -7px);
+        width: 28px;
+      }
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $primary-color;
+    list-style: none;
+    padding-right: 1rem;
+    transform: translateY(-100%);
+    @include transition-ease-in-out;
+
+    &.open {
+      transform: translateY(0);
+    }
+  }
 }
