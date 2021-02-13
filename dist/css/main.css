@@ -247,14 +247,14 @@ header .logo {
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
+  gap: 3rem;
+  place-items: center;
 }
 
 .services-container .card {
   background-color: #d3d3d3;
   width: 80%;
-  margin: 3.3vh auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .services-container .card i {
@@ -277,10 +277,6 @@ header .logo {
 .services-container .card p {
   text-align: justify;
   font-size: 1.1rem;
-}
-
-.services-container .card:last-child {
-  margin-bottom: 9vh;
 }
 
 .about-us {
@@ -322,10 +318,54 @@ header .logo {
 
 .testimonials {
   background-color: green;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.testimonials h2 {
+  padding: 0 1.3rem 1.6rem;
+}
+
+.testimonials-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 3rem;
+  place-items: center;
+}
+
+.testimonials-container {
+  width: 280px;
+  height: 400px;
+  background-color: #d3d3d3;
+  padding: 3rem 1.3rem;
+}
+
+.testimonials-container p,
+.testimonials-container h3,
+.testimonials-container h4 {
+  padding-top: 1rem;
+  background-color: blue;
+}
+
+.img-container {
+  margin: 0;
+}
+
+.img-container img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
 
 .contact {
   background-color: hotpink;
+  text-align: center;
 }
 
 footer {
