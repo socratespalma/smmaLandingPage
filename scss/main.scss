@@ -19,17 +19,24 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  // height: 9vh;
+  height: 9vh;
   z-index: 100;
   padding: 1rem;
   background-color: red;
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: absolute;
+    z-index: 90;
+  }
 }
 
 .menu-btn {
   position: absolute;
   z-index: 90;
   right: 1rem;
-  top: 1rem;
+  top: 1.2rem;
   height: 20px;
   width: 28px;
   cursor: pointer;
@@ -69,7 +76,7 @@ header {
     }
 
     &.open {
-      transform: rotate(720deg);
+      transform: rotate(360deg);
       background-color: transparent;
 
       &::before {
@@ -113,5 +120,162 @@ header {
     &.open {
       transform: translateY(0);
     }
+
+    &__item {
+      transform: translateX(100vw);
+      @include transition-ease-in-out;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      &.active > a {
+        color: orange;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: 300;
+      @include transition-ease-in-out;
+
+      &:hover {
+        color: orange;
+      }
+    }
   }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav__item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(#333, 0.6), rgba(#333, 0.3)),
+    url("/dist/assets/img/Hero_image.jpg") center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 0 2rem;
+
+  h1 {
+    padding-top: 20vh;
+    font-size: 3rem;
+  }
+  h2 {
+    padding: 2rem 0 3rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .cta {
+    border: 3px solid $text-color;
+    padding: 9px;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+
+    &:hover {
+      background-color: #333;
+      @include transition-ease-in-out;
+    }
+  }
+}
+
+.services {
+  background-color: blue;
+  text-align: center;
+  padding: 5rem 0;
+
+  h2 {
+    padding: 0 1.3rem 1.6rem;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    .card {
+      background-color: #d3d3d3;
+      width: 80%;
+      margin: 3.3vh auto;
+      padding: 2rem;
+      text-align: center;
+
+      i {
+        font-size: 2rem;
+        padding: 1.5rem;
+        background-color: red;
+        border-radius: 50%;
+      }
+
+      .fa-funnel-dollar,
+      .fa-users {
+        padding: 1.5rem 1.3rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        padding: 0.5rem 0;
+      }
+
+      p {
+        text-align: justify;
+        font-size: 1.1rem;
+      }
+
+      &:last-child {
+        margin-bottom: 9vh;
+      }
+    }
+  }
+}
+
+.about-us {
+  background-color: brown;
+  text-align: center;
+  padding: 5rem 0;
+
+  h2 {
+    padding: 0 1.3rem 0.3rem;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    align-items: center;
+
+    figure {
+      margin: 0;
+
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    p {
+      text-align: justify;
+      padding: 0 2rem;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.testimonials {
+  background-color: green;
+}
+
+.contact {
+  background-color: hotpink;
+}
+
+footer {
+  background-color: black;
 }
