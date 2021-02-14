@@ -27,7 +27,7 @@ header {
   height: 9vh;
   z-index: 100;
   padding: 1rem;
-  background-color: red;
+  background-color: #f7f4f3ff;
 }
 
 header .logo {
@@ -35,6 +35,13 @@ header .logo {
   font-size: 1.5rem;
   position: absolute;
   z-index: 90;
+  color: #333;
+}
+
+header .logo.open {
+  color: #f7f4f3ff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn {
@@ -55,7 +62,7 @@ header .logo {
   top: 0.5rem;
   width: 28px;
   height: 3px;
-  background-color: #fff;
+  background-color: #333;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   border-radius: 8px;
@@ -67,7 +74,7 @@ header .logo {
   top: -8px;
   width: 16px;
   height: 3px;
-  background-color: #fff;
+  background-color: #333;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   border-radius: 8px;
@@ -79,7 +86,7 @@ header .logo {
   top: 8px;
   width: 22px;
   height: 3px;
-  background-color: #fff;
+  background-color: #333;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   border-radius: 8px;
@@ -95,12 +102,15 @@ header .logo {
   -webkit-transform: rotate(45deg) translate(5px, 8px);
           transform: rotate(45deg) translate(5px, 8px);
   width: 28px;
+  background-color: #f7f4f3ff;
+  z-index: 100;
 }
 
 .menu-btn__burger.open::after {
   -webkit-transform: rotate(-45deg) translate(3px, -7px);
           transform: rotate(-45deg) translate(3px, -7px);
   width: 28px;
+  background-color: #f71735ff;
 }
 
 .nav {
@@ -159,7 +169,7 @@ header .logo {
 }
 
 .nav .menu-nav__item.active > a {
-  color: orange;
+  color: #f71735ff;
 }
 
 .nav .menu-nav__link {
@@ -167,13 +177,13 @@ header .logo {
   font-size: 2rem;
   text-transform: uppercase;
   padding: 2rem 0;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .nav .menu-nav__link:hover {
-  color: orange;
+  color: #f71735ff;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -231,7 +241,7 @@ header .logo {
 }
 
 .services {
-  background-color: blue;
+  background-color: #f71735ff;
   text-align: center;
   padding: 5rem 0;
 }
@@ -252,15 +262,17 @@ header .logo {
 }
 
 .services-container .card {
-  background-color: #d3d3d3;
-  width: 80%;
+  background-color: #f7f4f3ff;
+  color: #333;
+  width: 90%;
   padding: 2rem;
 }
 
 .services-container .card i {
   font-size: 2rem;
   padding: 1.5rem;
-  background-color: red;
+  background-color: #f71735ff;
+  color: #f7f4f3ff;
   border-radius: 50%;
 }
 
@@ -280,7 +292,7 @@ header .logo {
 }
 
 .about-us {
-  background-color: brown;
+  background-color: #6290c8ff;
   text-align: center;
   padding: 5rem 0;
 }
@@ -317,9 +329,10 @@ header .logo {
 }
 
 .testimonials {
-  background-color: green;
+  background-color: #f7f4f3ff;
   text-align: center;
   padding: 5rem 0;
+  color: #333;
 }
 
 .testimonials h2 {
@@ -338,9 +351,12 @@ header .logo {
 }
 
 .testimonials-container {
-  width: 280px;
+  width: 90%;
   height: 400px;
-  background-color: #d3d3d3;
+  background-color: #333;
+  -webkit-box-shadow: 8px 8px 25px 2px black;
+          box-shadow: 8px 8px 25px 2px black;
+  color: #f7f4f3ff;
   padding: 3rem 1.3rem;
 }
 
@@ -348,7 +364,6 @@ header .logo {
 .testimonials-container h3,
 .testimonials-container h4 {
   padding-top: 1rem;
-  background-color: blue;
 }
 
 .img-container {
@@ -361,10 +376,12 @@ header .logo {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  -webkit-box-shadow: 8px 8px 25px 2px black;
+          box-shadow: 8px 8px 25px 2px black;
 }
 
 .contact {
-  background-color: hotpink;
+  background-color: #fca311ff;
   text-align: center;
   padding: 5rem 0;
 }
@@ -395,8 +412,9 @@ header .logo {
 }
 
 .contact-form {
-  background-color: #d3d3d3;
-  width: 280px;
+  background-color: #f7f4f3ff;
+  color: #333;
+  width: 90%;
   height: 300px;
   margin: 0 auto;
   padding: 2rem;
@@ -410,6 +428,7 @@ header .logo {
 .contact-form input[type="email"] {
   border: 0;
   border-bottom: 2px solid #333;
+  background-color: #f7f4f3ff;
   font-size: 1rem;
   padding: 0.3rem;
   width: 100%;
@@ -419,8 +438,13 @@ header .logo {
   width: 100%;
   font-size: 1rem;
   padding: 0.6rem;
+  margin-top: 0.6rem;
   cursor: pointer;
-  border: 1px solid #333;
+  background-color: #333;
+  color: #f7f4f3ff;
+  border: 2px solid #333;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .contact-form input:focus {
@@ -428,8 +452,63 @@ header .logo {
 }
 
 footer {
-  background-color: black;
+  background-color: #333;
   text-align: center;
   padding: 3rem 0;
+}
+
+footer .social {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+footer .social .i-facebook {
+  padding: 1rem 1.1rem;
+}
+
+footer .social i {
+  border-radius: 50%;
+  border: 1px solid #f7f4f3ff;
+  padding: 1rem;
+  margin: 0 0.3rem;
+}
+
+footer .social i:hover {
+  background-color: #b8b8b8;
+  color: #333;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+footer .footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #fff;
+}
+
+footer .footer__nav a:hover {
+  color: #d8d8d8;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+footer p {
+  padding-top: 1.9rem;
 }
 /*# sourceMappingURL=main.css.map */

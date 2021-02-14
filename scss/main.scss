@@ -22,13 +22,20 @@ header {
   height: 9vh;
   z-index: 100;
   padding: 1rem;
-  background-color: red;
+  background-color: $isabelline;
+  // color: $isabelline;
 
   .logo {
     font-weight: 700;
     font-size: 1.5rem;
     position: absolute;
     z-index: 90;
+    color: $primary-color;
+
+    &.open {
+      color: $isabelline;
+      @include transition-ease-in-out;
+    }
   }
 }
 
@@ -40,7 +47,6 @@ header {
   height: 20px;
   width: 28px;
   cursor: pointer;
-  // background-color: blue;
   @include transition-ease-in-out;
 
   &__burger {
@@ -49,7 +55,7 @@ header {
     top: 0.5rem;
     width: 28px;
     height: 3px;
-    background-color: $text-color;
+    background-color: $primary-color;
     @include transition-ease-in-out;
     border-radius: 8px;
 
@@ -59,7 +65,7 @@ header {
       top: -8px;
       width: 16px;
       height: 3px;
-      background-color: $text-color;
+      background-color: $primary-color;
       @include transition-ease-in-out;
       border-radius: 8px;
     }
@@ -70,7 +76,7 @@ header {
       top: 8px;
       width: 22px;
       height: 3px;
-      background-color: $text-color;
+      background-color: $primary-color;
       @include transition-ease-in-out;
       border-radius: 8px;
     }
@@ -82,11 +88,14 @@ header {
       &::before {
         transform: rotate(45deg) translate(5px, 8px);
         width: 28px;
+        background-color: $isabelline;
+        z-index: 100;
       }
 
       &::after {
         transform: rotate(-45deg) translate(3px, -7px);
         width: 28px;
+        background-color: $imperial-red;
       }
     }
   }
@@ -130,7 +139,7 @@ header {
       }
 
       &.active > a {
-        color: orange;
+        color: $imperial-red;
       }
     }
 
@@ -139,11 +148,11 @@ header {
       font-size: 2rem;
       text-transform: uppercase;
       padding: 2rem 0;
-      font-weight: 300;
+      font-weight: 400;
       @include transition-ease-in-out;
 
       &:hover {
-        color: orange;
+        color: $imperial-red;
       }
     }
   }
@@ -187,9 +196,10 @@ header {
 }
 
 .services {
-  background-color: blue;
+  background-color: $imperial-red;
   text-align: center;
   padding: 5rem 0;
+  // color: $primary-color;
 
   h2 {
     padding: 0 1.3rem 1.6rem;
@@ -203,8 +213,10 @@ header {
     place-items: center;
 
     .card {
-      background-color: #d3d3d3;
-      width: 80%;
+      background-color: $isabelline;
+      color: $primary-color;
+      // box-shadow: 8px 8px 25px 2px rgb(128, 128, 128);
+      width: 90%;
       // margin: 3.3vh auto;
       padding: 2rem;
       // text-align: center;
@@ -212,7 +224,8 @@ header {
       i {
         font-size: 2rem;
         padding: 1.5rem;
-        background-color: red;
+        background-color: $imperial-red;
+        color: $isabelline;
         border-radius: 50%;
       }
 
@@ -239,7 +252,7 @@ header {
 }
 
 .about-us {
-  background-color: brown;
+  background-color: $united-nations-blue;
   text-align: center;
   padding: 5rem 0;
 
@@ -271,9 +284,10 @@ header {
 }
 
 .testimonials {
-  background-color: green;
+  background-color: $isabelline;
   text-align: center;
   padding: 5rem 0;
+  color: $primary-color;
 
   h2 {
     padding: 0 1.3rem 1.6rem;
@@ -289,16 +303,18 @@ header {
 }
 
 .testimonials-container {
-  width: 280px;
+  width: 90%;
   height: 400px;
-  background-color: #d3d3d3;
+  background-color: $primary-color;
+  box-shadow: 8px 8px 25px 2px rgb(0, 0, 0);
+  color: $isabelline;
   padding: 3rem 1.3rem;
 
   p,
   h3,
   h4 {
     padding-top: 1rem;
-    background-color: blue;
+    // background-color: blue;
   }
 }
 
@@ -310,11 +326,12 @@ header {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
+    box-shadow: 8px 8px 25px 2px rgb(0, 0, 0 / 33%);
   }
 }
 
 .contact {
-  background-color: hotpink;
+  background-color: $orange-web;
   text-align: center;
   padding: 5rem 0;
 
@@ -340,8 +357,9 @@ header {
   }
 
   &-form {
-    background-color: #d3d3d3;
-    width: 280px;
+    background-color: $isabelline;
+    color: $primary-color;
+    width: 90%;
     height: 300px;
     margin: 0 auto;
     padding: 2rem;
@@ -354,6 +372,7 @@ header {
     input[type="email"] {
       border: 0;
       border-bottom: 2px solid $primary-color;
+      background-color: $isabelline;
       font-size: 1rem;
       padding: 0.3rem;
       width: 100%;
@@ -363,8 +382,13 @@ header {
       width: 100%;
       font-size: 1rem;
       padding: 0.6rem;
+      margin-top: 0.6rem;
       cursor: pointer;
-      border: 1px solid $primary-color;
+      background-color: $primary-color;
+      color: $isabelline;
+      border: 2px solid $primary-color;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     input:focus {
@@ -374,7 +398,55 @@ header {
 }
 
 footer {
-  background-color: black;
+  background-color: $primary-color;
   text-align: center;
   padding: 3rem 0;
+
+  .social {
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    // background-color: red;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+
+    .i-facebook {
+      padding: 1rem 1.1rem;
+      // background-color: red;
+    }
+
+    i {
+      border-radius: 50%;
+      border: 1px solid $isabelline;
+      padding: 1rem;
+      margin: 0 0.3rem;
+
+      &:hover {
+        background-color: #b8b8b8;
+        color: $primary-color;
+        @include transition-ease-in-out;
+      }
+    }
+  }
+
+  .footer__nav {
+    // background-color: green;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid $text-color;
+
+    a:hover {
+      color: #d8d8d8;
+      @include transition-ease-in-out;
+    }
+  }
+
+  p {
+    padding-top: 1.9rem;
+  }
 }
