@@ -316,8 +316,65 @@ header {
 .contact {
   background-color: hotpink;
   text-align: center;
+  padding: 5rem 0;
+
+  h2 {
+    padding: 0 1.3rem 1.6rem;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  .handshake-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  &-form {
+    background-color: #d3d3d3;
+    width: 280px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    &__input {
+      margin: 1rem 0;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      border: 0;
+      border-bottom: 2px solid $primary-color;
+      font-size: 1rem;
+      padding: 0.3rem;
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.6rem;
+      cursor: pointer;
+      border: 1px solid $primary-color;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  }
 }
 
 footer {
   background-color: black;
+  text-align: center;
+  padding: 3rem 0;
 }

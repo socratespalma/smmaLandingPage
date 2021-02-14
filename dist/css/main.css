@@ -366,9 +366,70 @@ header .logo {
 .contact {
   background-color: hotpink;
   text-align: center;
+  padding: 5rem 0;
+}
+
+.contact h2 {
+  padding: 0 1.3rem 1.6rem;
+}
+
+.contact-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact figure {
+  margin: 0;
+}
+
+.contact .handshake-img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact-form {
+  background-color: #d3d3d3;
+  width: 280px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact-form__input {
+  margin: 1rem 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  border: 0;
+  border-bottom: 2px solid #333;
+  font-size: 1rem;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+.contact-form input[type="submit"] {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.contact-form input:focus {
+  outline: none;
 }
 
 footer {
   background-color: black;
+  text-align: center;
+  padding: 3rem 0;
 }
 /*# sourceMappingURL=main.css.map */
