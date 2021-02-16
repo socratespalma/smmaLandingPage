@@ -511,4 +511,53 @@ footer .footer__nav a:hover {
 footer p {
   padding-top: 1.9rem;
 }
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    font-size: 2rem;
+    top: 1.9rem;
+    left: 2rem;
+  }
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .menu-nav {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    height: 100%;
+    background-color: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav__link {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+  .hero h1 {
+    padding-top: 40vh;
+  }
+  .services-container .card {
+    width: 50%;
+  }
+  .about-us div p {
+    padding: 0 4rem;
+  }
+  .testimonials-container,
+  .contact-form {
+    width: 50%;
+  }
+  .footer__nav {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
 /*# sourceMappingURL=main.css.map */

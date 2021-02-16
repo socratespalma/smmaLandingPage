@@ -450,3 +450,71 @@ footer {
     padding-top: 1.9rem;
   }
 }
+
+@include media-md {
+  .logo {
+    font-size: 2rem;
+    top: 1.9rem;
+    left: 2rem;
+  }
+
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background-color: transparent;
+      text-align: right;
+
+      &__item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+
+      &__link {
+        font-size: 1.5rem;
+        color: $primary-color;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .hero {
+    h1 {
+      padding-top: 40vh;
+    }
+  }
+
+  .services {
+    &-container {
+      .card {
+        width: 50%;
+      }
+    }
+  }
+
+  .about-us {
+    div {
+      p {
+        padding: 0 4rem;
+      }
+    }
+  }
+
+  .testimonials-container,
+  .contact-form {
+    width: 50%;
+  }
+
+  .footer__nav {
+    justify-content: space-evenly;
+    // width: 50vw;
+    // background-color: red;
+  }
+}
