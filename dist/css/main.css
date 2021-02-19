@@ -650,4 +650,54 @@ footer p {
     grid-column: 4/-1;
   }
 }
+
+@media only screen and (min-width: 1900px) {
+  .services-container {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 6rem;
+  }
+  .services-container .card {
+    width: 25rem;
+  }
+  .services-container .card:nth-child(1) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .about-us div figure {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .about-us div p {
+    grid-column: 3/-2;
+  }
+  .testimonials-row {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 6rem;
+  }
+  .testimonials-row .testimonials-container {
+    width: 20rem;
+  }
+  .testimonials-row .testimonials-container:nth-child(1) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .contact-grid {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .contact-grid .contact-form {
+    width: 33rem;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+  }
+  .contact-grid figure {
+    grid-column: 4/-2;
+  }
+}
 /*# sourceMappingURL=main.css.map */

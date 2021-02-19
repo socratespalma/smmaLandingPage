@@ -610,3 +610,57 @@ footer {
     }
   }
 }
+
+@include media-xl {
+  .services-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    // place-items: unset;
+    gap: 6rem;
+
+    .card {
+      width: 25rem;
+
+      &:nth-child(1) {
+        grid-column: 2/3;
+      }
+    }
+  }
+
+  .about-us {
+    div {
+      figure {
+        grid-column: 2/3;
+      }
+
+      p {
+        grid-column: 3/-2;
+      }
+    }
+  }
+
+  .testimonials-row {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 6rem;
+
+    .testimonials-container {
+      width: 20rem;
+
+      &:nth-child(1) {
+        grid-column: 2/3;
+      }
+    }
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    .contact-form {
+      width: 33rem;
+      grid-column: 2/4;
+    }
+
+    figure {
+      grid-column: 4/-2;
+    }
+  }
+}
